@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Render Distance</Name>
+  <Author>Admin</Author>
+  <Version>0.2.0</Version>
+  <ModSide>Client</ModSide>
+  <Description>[h1]Render Distance[/h1]
+
+Client-only. Buildings and fire/particle effects stay visible farther away.
+
+[h2]Requires[/h2]
+[list]
+[*]BepInEx 5.4
+[*]StationeersLaunchPad: [url]https://github.com/StationeersLaunchPad/StationeersLaunchPad[/url]
+[/list]
+Do not install on Dedicated Server.
+
+[h2]In-game menu[/h2]
+Press [b]F10[/b] while in the world (hotkey is configurable) for sliders and which objects are affected.
+
+[h2]Config[/h2]
+Stationeers/BepInEx/config/se.admin.RenderDistance.cfg
+
+[h2]Source[/h2]
+GitHub: [url]https://github.com/REPLACE_GITHUB_OWNER/stationeers-render-distance[/url]
+
+Many distant fires is expensive. Lower particle range if FPS drops.
+  </Description>
+  <InGameDescription>
+    <![CDATA[<size="30"><color=#ffa500>Render Distance</color></size>
+Client-only. Press F10 in-world for distance sliders.
+Requires BepInEx + StationeersLaunchPad. Do not install on Dedicated Server.
+]]>
+  </InGameDescription>
+  <ChangeLog>
+    [h3]Version 0.2.0:[/h3]
+    [list]
+    [*]In-game F10 settings menu (sliders and affected objects)
+    [*]Workshop package (About, preview images, local mods folder)
+    [/list]
+    [h3]Version 0.1.0:[/h3]
+    [list]
+    [*]Initial release: configurable building and particle render distances, client-only
+    [/list]
+  </ChangeLog>
+  <Tags>
+    <Tag>StationeersMods</Tag>
+    <Tag>Client</Tag>
+  </Tags>
+  <Dependencies />
+  <LoadBefore />
+  <LoadAfter />
+</ModMetadata>

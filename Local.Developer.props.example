@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Project>
+  <PropertyGroup>
+    <!-- Copy this file to Local.Developer.props and point at your install if Steam is not in a default path. -->
+    <StationeersDllDir>C:\Program Files (x86)\Steam\steamapps\common\Stationeers\rocketstation_Data\Managed</StationeersDllDir>
+  </PropertyGroup>
+</Project>

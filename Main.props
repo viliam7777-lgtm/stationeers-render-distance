@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <StationeersDllDir>C:\Program Files (x86)\Steam\steamapps\common\Stationeers\rocketstation_Data\Managed</StationeersDllDir>
+    <DllSubDirW>steamapps\common\Stationeers\rocketstation_Data\Managed</DllSubDirW>
+    <StationeersDllDir Condition="Exists('C:\Program Files (x86)\Steam\$(DllSubDirW)')">C:\Program Files (x86)\Steam\$(DllSubDirW)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('C:\Program Files\Steam\$(DllSubDirW)')">C:\Program Files\Steam\$(DllSubDirW)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('D:\Program Files (x86)\Steam\$(DllSubDirW)')">D:\Program Files (x86)\Steam\$(DllSubDirW)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('D:\Program Files\Steam\$(DllSubDirW)')">D:\Program Files\Steam\$(DllSubDirW)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('C:\Steam\$(DllSubDirW)')">C:\Steam\$(DllSubDirW)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('D:\Steam\$(DllSubDirW)')">D:\Steam\$(DllSubDirW)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('E:\Steam\$(DllSubDirW)')">E:\Steam\$(DllSubDirW)</StationeersDllDir>
+    <DllSubDirL>steamapps/common/Stationeers/rocketstation_Data/Managed</DllSubDirL>
+    <StationeersDllDir Condition="Exists('$(HOME)/.steam/steam/$(DllSubDirL)')">$(HOME)/.steam/steam/$(DllSubDirL)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('$(HOME)/Steam/$(DllSubDirL)')">$(HOME)/Steam/$(DllSubDirL)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('$(STEAMROOT)/$(DllSubDirL)')">$(STEAMROOT)/$(DllSubDirL)</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('$(STATIONEERS_DIR)/rocketstation_Data/Managed')">$(STATIONEERS_DIR)/rocketstation_Data/Managed</StationeersDllDir>
+    <StationeersDllDir Condition="Exists('$(STATIONEERS_DLL_DIR)')">$(STATIONEERS_DLL_DIR)</StationeersDllDir>
+  </PropertyGroup>
+  <Import Project="Local.Developer.props" Condition="Exists('Local.Developer.props')" />
+  <Target Name="PrintPaths" BeforeTargets="Build">
+    <Message Importance="High" Text="StationeersDllDir: $(StationeersDllDir)" />
+    <Error Condition="!Exists('$(StationeersDllDir)/Assembly-CSharp.dll')" Text="Could not find Stationeers. Set STATIONEERS_DIR to the game folder, STATIONEERS_DLL_DIR to rocketstation_Data/Managed, or edit Local.Developer.props." />
+  </Target>
+</Project>

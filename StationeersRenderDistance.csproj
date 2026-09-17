@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk" InitialTargets="PrintPaths">
+  <Import Project="Main.props" Condition="Exists('Main.props')" />
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>StationeersRenderDistance</AssemblyName>
+    <RootNamespace>StationeersRenderDistance</RootNamespace>
+    <Description>Client-only render distance for Stationeers buildings and particle effects</Description>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Deterministic>true</Deterministic>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <Version>0.2.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <Publicize Include="Assembly-CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(StationeersDllDir)/../../BepInEx/core/BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(StationeersDllDir)/../../BepInEx/core/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(StationeersDllDir)/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(StationeersDllDir)/UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(StationeersDllDir)/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(StationeersDllDir)/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(StationeersDllDir)/UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="StationeersMods.Interface">
+      <HintPath>$(StationeersDllDir)/../../BepInEx/plugins/StationeersLaunchPad/StationeersMods.Interface.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="About\About.xml" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="About\Preview.png" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="About\thumb.png" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="README.md" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <PropertyGroup>
+    <StationeersLocalModsDir>$(USERPROFILE)\Documents\My Games\Stationeers\mods\RenderDistance</StationeersLocalModsDir>
+  </PropertyGroup>
+  <Target Name="CopyToLocalMods" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <MakeDir Directories="$(StationeersLocalModsDir)\About" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(StationeersLocalModsDir)" />
+    <Copy SourceFiles="About\About.xml;About\Preview.png;About\thumb.png" DestinationFolder="$(StationeersLocalModsDir)\About" />
+    <Message Importance="High" Text="Copied workshop package to $(StationeersLocalModsDir)" />
+  </Target>
+</Project>
