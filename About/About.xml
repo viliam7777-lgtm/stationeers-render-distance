@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>Render Distance</Name>
-  <Author>Admin</Author>
+  <Author>viliam7777-lgtm</Author>
   <Version>0.2.0</Version>
   <ModSide>Client</ModSide>
   <Description>[h1]Render Distance[/h1]
@@ -22,7 +22,8 @@ Press [b]F10[/b] while in the world (hotkey is configurable) for sliders and whi
 Stationeers/BepInEx/config/se.admin.RenderDistance.cfg
 
 [h2]Source[/h2]
-GitHub: [url]https://github.com/REPLACE_GITHUB_OWNER/stationeers-render-distance[/url]
+GitHub: [url]https://github.com/viliam7777-lgtm/stationeers-render-distance[/url]
+Steam Workshop: not published yet (publish from the in-game Workshop menu).
 
 Many distant fires is expensive. Lower particle range if FPS drops.
   </Description>
