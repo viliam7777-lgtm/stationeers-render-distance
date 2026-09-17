@@ -3,6 +3,7 @@
   <Name>Render Distance</Name>
   <Author>viliam7777-lgtm</Author>
   <Version>0.2.0</Version>
+  <WorkshopHandle>3803395871</WorkshopHandle>
   <ModSide>Client</ModSide>
   <Description>[h1]Render Distance[/h1]
 
@@ -23,7 +24,7 @@ Stationeers/BepInEx/config/se.admin.RenderDistance.cfg
 
 [h2]Source[/h2]
 GitHub: [url]https://github.com/viliam7777-lgtm/stationeers-render-distance[/url]
-Steam Workshop: not published yet (publish from the in-game Workshop menu).
+Steam Workshop: [url]https://steamcommunity.com/sharedfiles/filedetails/?id=3803395871[/url]
 
 Many distant fires is expensive. Lower particle range if FPS drops.
   </Description>

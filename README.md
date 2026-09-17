@@ -5,7 +5,7 @@ Client-only [BepInEx](https://github.com/BepInEx/BepInEx) + [StationeersLaunchPa
 It does not change simulation, saves, or networking. Dedicated servers must not load it.
 
 - **Source:** https://github.com/viliam7777-lgtm/stationeers-render-distance
-- **Steam Workshop:** not published yet. After the first in-game Publish, this will be `https://steamcommunity.com/sharedfiles/filedetails/?id=<id>`
+- **Steam Workshop:** https://steamcommunity.com/sharedfiles/filedetails/?id=3803395871
 
 ## Requirements
 
@@ -16,7 +16,7 @@ It does not change simulation, saves, or networking. Dedicated servers must not 
 ## Install (Workshop)
 
 1. Install BepInEx and StationeersLaunchPad on the **client**.
-2. Subscribe to this item on Steam Workshop (link above, once published).
+2. Subscribe on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3803395871).
 3. Enable it in LaunchPad. Press **F10** in-world for sliders.
 
 Do **not** enable this on Stationeers Dedicated Server.
